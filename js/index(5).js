@@ -14,6 +14,12 @@ function calcularMediaNotas(alunosNotas) {
     return totalNotas / alunosNotas.length
 }
 
+function adicionaAluno (estudantes, aluno, nota) {
+    estudantes.push({ nome: aluno, nota: nota })
+}
+
+adicionaAluno(alunos, "Kyle", 57)
+
 let counter = 0
 while (counter < alunos.length) {
     document.write(alunos[counter].nome + ' ' + alunos[counter].nota + "<br>");
@@ -22,23 +28,3 @@ while (counter < alunos.length) {
 
 document.write("A média da turma é de: ");
 document.write(calcularMediaNotas(alunos).toString());
-document.write(notaQualitativa);
-
-if (0 <= totalNotas / alunosNotas.length <= 19) {
-    notaQualitativa = "Muito Fraco"
-}
-else if (19 < totalNotas / alunosNotas.length <= 39) {
-    notaQualitativa = "Insuficiente"
-}
-else if (39 < totalNotas / alunosNotas.length <= 69) {
-    notaQualitativa = "Suficiente"
-}
-else if (69 < totalNotas / alunosNotas.length <= 89) {
-    notaQualitativa = "Bom"
-}
-else if (89 < totalNotas / alunosNotas.length <= 100) {
-    notaQualitativa = "Muito Bom"
-}
-else {
-    document.write("Erro")
-}
