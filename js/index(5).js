@@ -15,10 +15,17 @@ function calcularMediaNotas(alunosNotas) {
 }
 
 function adicionaAluno (estudantes, aluno, nota) {
-    estudantes.push({ nome: aluno, nota: nota })
+    estudantes.push({ nome: aluno, nota: nota });
 }
 
-adicionaAluno(alunos, "Kyle", 57)
+function removerAluno(estudantes, nomeAluno) {
+    let index = estudantes.findIndex((aluno) => aluno.nome == nomeAluno);
+    estudantes.splice(index,1);
+}
+
+removerAluno(alunos, "Charlie");
+
+adicionaAluno(alunos, "Kyle", 57);
 
 let counter = 0
 while (counter < alunos.length) {
