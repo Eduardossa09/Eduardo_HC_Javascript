@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olá, tudo bem?</title>
+    <title>Tabela de notas</title>
     <link rel="stylesheet" href="../css/styles(5).css">
 </head>
 
 <body>
     <header>
-        <img src="../images/happycodelogo.png" alt="">
-        <ul>
+        <img id="logo" src="../images/happycodelogo.png" alt="">
+        <ul class="navbar">
             <li>Home</li>
             <li>Link1</li>
             <li>Link2</li>
@@ -20,6 +20,27 @@
     <main>
         <h1>Alunos</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti est enim eum numquam distinctio reprehenderit quas cumque ratione, harum quia vitae non exercitationem laboriosam iure cupiditate delectus modi, iusto error.</p>
+        <h2>Tabela de notas</h2>
+            <table class="table">
+                <caption>
+                    Score table 
+                </caption>
+                <thead>
+                  <tr>
+                    <th class="student" scope="col">Students</th>
+                    <th class="score" scope="col">Score</th>
+                  </tr>
+                </thead>
+                <tbody class="tableBody">
+                  
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row">Average:</th>
+                    <td class="averageScore"></td>
+                  </tr>
+                </tfoot>
+              </table>
     </main>
     <script src="../js/index(5).js"></script>
 </body>

@@ -14,6 +14,25 @@ function calcularMediaNotas(alunosNotas) {
     return totalNotas / alunosNotas.length
 }
 
+function updateTable(estudantes) {
+    const tbody = document.querySelector(".tableBody");
+    const average = document.querySelector(".averageScore");
+    let tr;
+    let tdName;
+    let tdScore;
+    for (let position = 0; position < estudantes.length; position++) {
+        tr = document.createElement("tr");
+        tdName = document.createElement("td");
+        tdScore = document.createElement("td");
+        tdName.appendChild(document.createTextNode(estudantes[position].nome));
+        tdScore.appendChild(document.createTextNode(estudantes[position].nota));
+        tbody.appendChild(tr);
+        tr.appendChild(tdName);
+        tr.appendChild(tdScore);
+    }
+    average.appendChild(document.createTextNode(calcularMediaNotas(alunos)));
+}
+
 function adicionaAluno (estudantes, aluno, nota) {
     estudantes.push({ nome: aluno, nota: nota });
 }
@@ -27,6 +46,7 @@ removerAluno(alunos, "Charlie");
 
 adicionaAluno(alunos, "Kyle", 57);
 
+updateTable(alunos);
 let counter = 0
 while (counter < alunos.length) {
     document.write(alunos[counter].nome + ' ' + alunos[counter].nota + "<br>");

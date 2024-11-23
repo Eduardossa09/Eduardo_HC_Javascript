@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(22, 47, 255);
+    background-color: rgb(142, 190, 238);
     margin: 0;
 }
 
@@ -12,14 +12,14 @@ header {
     background-color: aliceblue;
 }
 
-header ul {
+header .navbar {
     width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-header img {
+header #logo {
     width: 5%;
     height: auto;
 }
@@ -38,4 +38,26 @@ main p {
     width: 60%;
     margin: 50px auto;
     text-align: center;
+}
+
+main .table {
+    width: 30%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+}
+
+main .table th, 
+main .table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(140 140 140);
+}
+
+main .table .thead tr th {
+    background-color: powderblue;
+}
+
+main .table .students, main .table .score {
+    background-color: lavender;
 }
